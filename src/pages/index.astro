@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import List from '../components/List.astro';
 ---
 
 <Layout title="Recursos UCR">
@@ -42,6 +43,17 @@ import Card from '../components/Card.astro';
 				body="Motor de búsqueda para encontrar información dentro de SIBDI."
 			/>
 		</ul>
+		<h1>Herramientas de posible <span class="text-gradient2">AYUDA</span></h1>
+		<ul role="list" class="link-link-grid">
+			<List
+				href='https://www.jstor.org/'
+				title='Base de datos Jstore'
+			/>
+			<List
+				href='https://pi.ai/'
+				title='Inteligencia Artificial Pi.AI'
+			/>
+		</ul>
 	</main>
 </Layout>
 
@@ -78,6 +90,13 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
+	.text-gradient2 {
+		background-image: var(--accent-gradient2);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
 	.instructions {
 		margin-bottom: 2rem;
 		border: 1px solid rgba(var(--accent-light), 25%);
@@ -101,5 +120,12 @@ import Card from '../components/Card.astro';
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.link-link-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+		margin-bottom: 2rem;
 	}
 </style>
