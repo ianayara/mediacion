@@ -3,9 +3,10 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
+	imagen: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, imagen} = Astro.props;
 ---
 <li class="link-list">
     <a href={href} target="_blank">
@@ -15,6 +16,7 @@ const { href, title, body } = Astro.props;
 		</h2>
 		<p>
 			{body}
+			<img src={imagen}> 
 		</p>
 	</a>
 </li>
@@ -57,5 +59,13 @@ const { href, title, body } = Astro.props;
 	}
 	.link-list:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light2));
+	}
+	img {
+		position: relative;
+		left: 200px;
+		bottom: 15px;
+		width: 35%;
+		height: 35%;
+		
 	}
 </style>

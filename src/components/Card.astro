@@ -3,14 +3,15 @@ interface Props {
 	title: string;
 	body: string;
 	href: string;
+	imagen: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, imagen } = Astro.props;
 ---
 
 <li class="link-card">
 	<a href={href} target="_blank">
-	<img src = "/public/bitmap.svg">
+		<img src={imagen}>
 		<h2>
 			{title}
 			<span>&rarr;</span>
@@ -27,7 +28,7 @@ const { href, title, body } = Astro.props;
 		padding: 1px;
 		background-color: #23262d;
 		background-image: none;
-		background-size: 400%;
+		background-size: 100%;
 		border-radius: 7px;
 		background-position: 100%;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -58,5 +59,13 @@ const { href, title, body } = Astro.props;
 	}
 	.link-card:is(:hover, :focus-within) h2 {
 		color: rgb(var(--accent-light));
+	}
+	img {
+		position: relative;
+		left: 215px;
+		bottom: 15px;
+		width: 35%;
+		height: 35%;
+		
 	}
 </style>
