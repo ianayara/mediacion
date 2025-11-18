@@ -1,34 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Univ from '../components/Univ.astro';
-
 ---
 
-<Layout title="Recursos UCR">
-	<main>
-		<h1>Elije tu <span class="text-gradient"><br>Universidad</br></span></h1>
-		<p class="instructions">
-			Página principal de prueba.
-		</p>
-		
-		<ul role="list" class="link-card-grid">
-			<Univ
-				href='/principal'
-				title='Universidad de Costa Rica'
-				imagen='/mpf.svg'
-			/>
+<Layout title="Página no encontrada">
+    <main>
+        <h1 class="text-gradient">Estamos trabajando desaparece!</h1>
+		<img src="/Jesusmp.svg" id="imagen1" alt="y que?" />
+        <img src="/mpd.svg" alt="y?" id="imagen2">
 
-			<Univ
-				href='/tec'
-				title='Tecnológico de Costa Rica'
-				imagen='/mpc.svg'
-			/>
-		</ul>
-	</main>
+    </main>
 </Layout>
 
 <style>
-	main {
+    main {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
@@ -98,5 +82,17 @@ import Univ from '../components/Univ.astro';
 		padding: 0;
 		margin-bottom: 2rem;
 	}
-	
+    img {
+        margin: auto;
+        position: flex;
+        padding: 1rem;
+    }
+    img#imagen1 {
+        width: 400px;
+        height: auto;
+    }
+    img#imagen2 {
+        width: 150px;
+        height: auto;
+    }
 </style>

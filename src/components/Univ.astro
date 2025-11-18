@@ -8,11 +8,10 @@ interface Props {
 const { href, title, imagen} = Astro.props;
 ---
 <li class="link-list">
-    <a href={href} target="_blank">
-		<h2>
+    <a href={href} target="_self">
+		<h1 class="text-gradient2">
 			{title}
-			<span>😮‍💨</span>
-		</h2>
+		</h1>
 		<p>
 			<img src={imagen}> 
 		</p>
@@ -42,10 +41,18 @@ const { href, title, imagen} = Astro.props;
 		background-color: #23262d;
 		opacity: 0.8;
 	}
-	h2 {
+	.text-gradient2 {
+		background-image: var(--accent-gradient2);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	h1 {
 		margin: 0;
 		font-size: 1.25rem;
 		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		text-align: center;
 	}
 	p {
 		margin-top: 0.5rem;
@@ -61,7 +68,8 @@ const { href, title, imagen} = Astro.props;
 	img {
 		position: relative;
 		left: 200px;
-		bottom: 15px;
+		top: 25px;
+		bottom: 1px;
 		width: 35%;
 		height: 35%;
 		
