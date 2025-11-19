@@ -4,25 +4,34 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Navbar">
     <header id="encabezado" class="bar">
-        <div class="derecha" id="iconos">
-            <div class="ucr">
-                <a>
-                    <img src="/UCR.svg" alt="UCR">
-                </a>
-            </div>
+        
+        <nav>
             
-            <div class="tec">
-                <a>
-                    <img src="/TEC.svg" alt="TEC">
-                </a>
-            </div>
-        </div>
-        <div class="center"></div>
-        <div class="izquierda" id="index">
-            <a>
-                <img src="/mpd.svg" alt="Menú">
-            </a>
-        </div>
+            <ul>
+                
+                <li class="iconos" id="uni">
+                    <a href="/principal" class="ucr">
+                        <img src="/UCR.svg" alt="UCR">
+                    </a>
+
+                    <a href="/tec" class="tec">
+                        <img src="/TEC.svg" alt="TEC">
+                    </a>
+                </li>
+                
+                <li class="center">
+                    <a href="">
+
+                    </a>
+                </li>
+                
+                <li class="iconos">
+                    <a href="/index" class="derecha">
+                        <img src="/mpd.svg" alt="Menú">
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
     </header>
 
@@ -31,16 +40,70 @@ import Layout from "../layouts/Layout.astro";
 <style>
     .encabezado{
         width: 100%;
-        position: relative;
+        position: sticky;
     }
     .bar{
         display: flex;
-        padding: 1rem;
+        margin: initial;
+        padding: 0.5rem;
+        height: fit-content;
+        margin-bottom: 0%;
     }
-    div{
+    nav{
+        display: flex;
+        width: 100%;
+        height: 50%;
+        border: 1px;
+        border-color: white;
+        border-radius: 5%;
+        position:relative;
+        top: 0%;
+    }
+    ul{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 50%;
+        width: 100%;
+        padding: 1%;
+        margin: none;
+    }
+
+    li{
         height: 5rem;
-        width: auto;
+        width: 100%;
+        display: flex;
     }
+    .iconos > a{
+		list-style: none;
+		display: flex;
+		padding: 1px;
+		background-color: #23262d;
+		background-image: none;
+		background-size: 100%;
+		border-radius: 7px;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+        opacity: 50%;
+        
+	}
+    
+    .derecha{
+        position: relative;
+        left: 75%;
+    }
+    @media screen and (max-width: 600px) {
+        .derecha{
+            position: relative;
+            left: 40%;
+        }
+    }
+        
+    .tec{
+        position: relative;
+        left: 10%;
+    }
+
     img{
         position: relative;
         height: 100%;

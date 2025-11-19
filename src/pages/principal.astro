@@ -2,11 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import List from '../components/List.astro';
+import Navegacion from '../components/navegacion.astro'
 ---
 
 <Layout title="Recursos UCR">
+	<Navegacion></Navegacion>
 	<main>
-		<h1>Recursos de la <span class="text-gradient">UCR</span></h1>
+		<h1 class="primero">Recursos de la <span class="text-gradient">UCR</span></h1>
 		<p class="instructions">
 			Esto, tan solo es un lugar específico donde tendré lo que pienso más importante de la U,
 			en cuestión de links.
@@ -61,14 +63,14 @@ import List from '../components/List.astro';
 				imagen='/bitmap2.svg'
 			/>
 
-<Card
+			<Card
 				href="https://normas-apa.org/"
 				title="Normas APA"
 				body="Página oficial de APA Septima Edición, revisar para dudas con los documentos."
 				imagen='/bitmap2.svg'
 			/>
 		</ul>
-		<h1>Herramientas de posible <span class="text-gradient2">AYUDA</span></h1>
+		<h1 class="segundo">Herramientas de posible <span class="text-gradient2">AYUDA</span></h1>
 		<ul role="list" class="link-link-grid">
 			<List
 				href='https://www.jstor.org/'
@@ -138,6 +140,25 @@ import List from '../components/List.astro';
 		text-align: center;
 		margin-bottom: 1em;
 	}
+
+	@media screen and (max-width: 600px) {
+		h1{
+			font-weight: 700;
+			line-height: 1;
+			text-align: center;
+			margin-bottom: 1em;
+		}
+
+		.primero{
+			font-size: 4rem;
+		}
+	
+		.segundo {
+			font-size: 3rem;
+		}
+		
+	}
+
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
