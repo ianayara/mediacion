@@ -1,0 +1,59 @@
+---
+interface Props {
+	href: string;
+    clase: string;
+    imagen: string;
+    atribute: string;
+}
+
+const { href, clase, imagen, atribute} = Astro.props;
+---
+<li class="iconos">
+    <a href={href} class={clase}>
+        <img src={imagen} alt={atribute}>
+    </a>
+</li>
+
+<style>
+    li{
+        height: 5rem;
+        width: 100%;
+        display: flex;
+    }
+    .iconos > a{
+		list-style: none;
+		display: flex;
+		padding: 1px;
+		background-color: #23262d;
+		background-image: none;
+		background-size: 100%;
+		border-radius: 7px;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+        opacity: 50%;
+        
+	}
+    
+    .derecha{
+        position: relative;
+        left: 75%;
+    }
+    @media screen and (max-width: 600px) {
+        .derecha{
+            position: relative;
+            left: 40%;
+        }
+    }
+        
+    .tec{
+        position: relative;
+        left: 10%;
+    }
+
+    img{
+        position: relative;
+        height: 100%;
+        width: auto;
+    }
+</style>
