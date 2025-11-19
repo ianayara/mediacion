@@ -11,7 +11,7 @@ const { href, title, body, imagen } = Astro.props;
 
 <li class="link-card">
 	<a href={href} target="_blank">
-		<img src={imagen}>
+		
 		<h2>
 			{title}
 			<span>&rarr;</span>
@@ -19,6 +19,8 @@ const { href, title, body, imagen } = Astro.props;
 		<p>
 			{body}
 		</p>
+		<img src={imagen}>
+		
 	</a>
 </li>
 <style>
@@ -62,10 +64,9 @@ const { href, title, body, imagen } = Astro.props;
 	}
 	img {
 		position: relative;
-		left: 215px;
-		bottom: 15px;
-		width: 35%;
-		height: 35%;
+		left: 75%;
+		bottom: 15%;
+		height: 55%;
 		
 	}
 </style>

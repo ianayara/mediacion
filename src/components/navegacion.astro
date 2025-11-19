@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Navbar">
+    <header id="encabezado" class="bar">
+        <div class="derecha" id="iconos">
+            <div class="ucr">
+                <a>
+                    <img src="/UCR.svg" alt="UCR">
+                </a>
+            </div>
+            
+            <div class="tec">
+                <a>
+                    <img src="/TEC.svg" alt="TEC">
+                </a>
+            </div>
+        </div>
+        <div class="center"></div>
+        <div class="izquierda" id="index">
+            <a>
+                <img src="/mpd.svg" alt="Menú">
+            </a>
+        </div>
+
+    </header>
+
+</Layout>
+
+<style>
+    .encabezado{
+        width: 100%;
+        position: relative;
+    }
+    .bar{
+        display: flex;
+        padding: 1rem;
+    }
+    div{
+        height: 5rem;
+        width: auto;
+    }
+    img{
+        position: relative;
+        height: 100%;
+        width: auto;
+    }
+
+</style>
