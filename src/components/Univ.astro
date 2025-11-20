@@ -5,7 +5,7 @@ interface Props {
 	imagen: string;
 }
 
-const { href, title, imagen} = Astro.props;
+const { href, title, imagen, } = Astro.props;
 ---
 <li class="link-list">
     <a href={href} target="_self">
@@ -13,7 +13,7 @@ const { href, title, imagen} = Astro.props;
 			{title}
 		</h1>
 		<p>
-			<img src={imagen}> 
+			<img src={imagen} > 
 		</p>
 	</a>
 </li>
@@ -72,6 +72,6 @@ const { href, title, imagen} = Astro.props;
 		bottom: 1px;
 		width: 35%;
 		height: 35%;
-		
 	}
+	
 </style>

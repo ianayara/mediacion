@@ -14,11 +14,13 @@ const { href, clase, imagen, atribute} = Astro.props;
     </a>
 </li>
 
+
 <style>
     li{
         height: 5rem;
         width: 100%;
         display: flex;
+        padding: 1rem;
     }
     .iconos > a{
 		list-style: none;
@@ -34,11 +36,7 @@ const { href, clase, imagen, atribute} = Astro.props;
         opacity: 50%;
         
 	}
-    
-    .derecha{
-        position: relative;
-        left: 75%;
-    }
+
     @media screen and (max-width: 600px) {
         .derecha{
             position: relative;
@@ -48,9 +46,15 @@ const { href, clase, imagen, atribute} = Astro.props;
         
     .tec{
         position: relative;
-        left: 10%;
+        left: 5%;
+        right: 5%;
+        
     }
-
+    .derecha{
+        position: relative;
+        left: 6%;
+        right: 6%;
+    }
     img{
         position: relative;
         height: 100%;
